@@ -109,7 +109,7 @@ public class Calculation {
         return "";
     }
 
-    public void dooo(String input){
+    public void exec(String input){
         while (input.contains("*") || input.contains("+") || input.contains("-") || input.contains("/")){
             if (input.matches("^-[0-9]+\\.[0-9]+$"))
                 break;

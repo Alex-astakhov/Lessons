@@ -10,8 +10,10 @@ import java.io.InputStreamReader;
 public class DoCalculation {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter yout expression: ");
         String input = reader.readLine();
         Calculation calculation = new Calculation();
-        calculation.dooo(input);
+        System.out.println("Result: ");
+        calculation.exec(input.replace(" ", ""));
     }
 }
