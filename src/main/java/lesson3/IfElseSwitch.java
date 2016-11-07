@@ -18,7 +18,7 @@ public class IfElseSwitch {
 
         int x = 1;
         int y = 2;
-        System.out.println(x == y ? " равны" : "неравны"); // сокращенный  if-else
+        System.out.println(x == y ? " равны" : "неравны"); // сокращенный  if-otherPack
 
         for (int i = 0; i < 10; i++) {
             if (i == 5) {

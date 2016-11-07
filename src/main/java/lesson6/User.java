@@ -10,6 +10,23 @@ public class User {
     public char gender;
     public static String type = "human";
 
+    public User(){
+    }
+
+    public User(String name){
+        this.name = name;
+    }
+
+    public User(String name, int age){
+        this(name);
+        this.age = age;
+    }
+
+    public User (String name, int age, String city){
+        this(name, age);
+        this.city = city;
+    }
+
     @Override
     public String toString(){
         return name + " " + age + " " + city + " " + gender + " " + type;

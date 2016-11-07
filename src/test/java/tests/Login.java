@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObject.MainPage;
 
@@ -38,10 +39,8 @@ public class Login {
         driver.get("https://kismia.com");
         MainPage mainPage = new MainPage(driver);
         mainPage.login(email, pass);
-
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.urlContains("/u"));
-
         Assert.assertTrue(driver.getCurrentUrl().contains("u18330465"));
     }
 
