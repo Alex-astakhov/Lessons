@@ -10,7 +10,7 @@ public class TestEmailSender {
     @Test
     public void sendEmail(){
         EmailSender emailSender = new EmailSender("alex-astakhov@ukr.net");
-        emailSender.sendEmail("Test email", "My lovely test email");
+        emailSender.sendEmail("TestTrelloApi email", "My lovely test email");
 
     }
 }

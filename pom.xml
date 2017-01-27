@@ -49,7 +49,7 @@
                 <version>2.19</version>
                 <configuration>
                     <argLine>
-                        -javaagent:C:/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
                     </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite}</suiteXmlFile>
@@ -117,11 +117,11 @@
             <version>4.5.2</version>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>3.5.0</version>
-        </dependency>
+        </dependency>-->
 
         <!--Allure TestNG Adaptor -->
         <dependency>
@@ -167,6 +167,19 @@
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>1.10.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit -->
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson -->
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-gson</artifactId>
+            <version>2.1.0</version>
         </dependency>
 
     </dependencies>
