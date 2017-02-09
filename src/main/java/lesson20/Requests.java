@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Requests {
     private static OkHttpClient client = new OkHttpClient();
 
-    public static String makeGatRequest(HttpUrl url){
+    public static String makeGetRequest(HttpUrl url){
         Request request = new Request.Builder()
                 .url(url)
                 .build();
@@ -28,6 +28,21 @@ public class Requests {
     }
 
     public static String makePostRequest(HttpUrl url, RequestBody body){
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+        Response response;
+        try {
+            response = client.newCall(request).execute();
+            return response.body().string();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static String makePostRequest(String url, RequestBody body){
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)

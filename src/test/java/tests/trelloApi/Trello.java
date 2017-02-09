@@ -3,7 +3,6 @@ package tests.trelloApi;
 import lesson20.Requests;
 import okhttp3.FormBody;
 import okhttp3.HttpUrl;
-import okhttp3.Request;
 import okhttp3.RequestBody;
 import org.testng.annotations.Test;
 
@@ -26,7 +25,7 @@ public class Trello {
         HttpUrl url = new HttpUrl.Builder().scheme(scheme).host(host).addPathSegments("1/boards/" + boardId)
                 .addQueryParameter("lists","open").addQueryParameter("list_fields","name").addQueryParameter("fields","name,desc")
                 .addQueryParameter("key",KEY).addQueryParameter("token",TOKEN).build();
-        String resp = Requests.makeGatRequest(url);
+        String resp = Requests.makeGetRequest(url);
         System.out.println(resp);
     }
 
@@ -35,7 +34,7 @@ public class Trello {
         HttpUrl url = new HttpUrl.Builder().scheme(scheme).host(host).addPathSegments("1/boards/" + boardId + "/lists")
                 .addQueryParameter("cards","open").addQueryParameter("card_fields","name").addQueryParameter("fields","name")
                 .addQueryParameter("key",KEY).addQueryParameter("token",TOKEN).build();
-        String resp = Requests.makeGatRequest(url);
+        String resp = Requests.makeGetRequest(url);
         System.out.println(resp);
     }
 
