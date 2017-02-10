@@ -49,7 +49,7 @@
                 <version>2.19</version>
                 <configuration>
                     <argLine>
-                        -javaagent:C:/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
                     </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite}</suiteXmlFile>

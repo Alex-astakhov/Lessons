@@ -15,4 +15,14 @@ public class DataStorage implements Serializable {
     public String userName;
     public int userAge;
     public Map<String, String> map = new HashMap<>();
+
+    @Override
+    public String toString() {
+        return "DataStorage{" +
+                "testName='" + testName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userAge=" + userAge +
+                ", map=" + map +
+                '}';
+    }
 }
